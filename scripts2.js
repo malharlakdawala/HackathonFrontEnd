@@ -43,47 +43,47 @@ document.addEventListener("mouseup", function (event) {
 });
 
 document.getElementById("firstElement").addEventListener("click", function () {
-  document.getElementById("section1").style.visibility = "hidden";
-  document.getElementById("section2").style.visibility = "hidden";
-  document.getElementById("section3").style.visibility = "visible";
-  document.getElementById("section4").style.visibility = "hidden";
-  document.getElementById("section5").style.visibility = "hidden";
+  document.getElementById("section1").style.zIndex = 1;
+  document.getElementById("section2").style.zIndex = 1;
+  document.getElementById("section3").style.zIndex = 2;
+  document.getElementById("section4").style.zIndex = 1;
+  document.getElementById("section5").style.zIndex = 1;
   document.getElementById("firstElement").style.color = "red";
 });
 
 document.getElementById("menuText").addEventListener("click", function () {
-  document.getElementById("section1").style.visibility = "hidden";
-  document.getElementById("section2").style.visibility = "hidden";
-  document.getElementById("section3").style.visibility = "hidden";
-  document.getElementById("section4").style.visibility = "visible";
-  document.getElementById("section5").style.visibility = "hidden";
+  document.getElementById("section1").style.zIndex = 1;
+  document.getElementById("section2").style.zIndex = 1;
+  document.getElementById("section3").style.zIndex = 1;
+  document.getElementById("section4").style.zIndex = 2;
+  document.getElementById("section5").style.zIndex = 1;
   document.getElementById("menuText").style.color = "red";
 });
 
 document.getElementById("menuColour").addEventListener("click", function () {
-  document.getElementById("section1").style.visibility = "visible";
-  document.getElementById("section2").style.visibility = "hidden";
-  document.getElementById("section3").style.visibility = "hidden";
-  document.getElementById("section4").style.visibility = "hidden";
-  document.getElementById("section5").style.visibility = "hidden";
+  document.getElementById("section1").style.zIndex = 2;
+  document.getElementById("section2").style.zIndex = 1;
+  document.getElementById("section3").style.zIndex = 1;
+  document.getElementById("section4").style.zIndex = 1;
+  document.getElementById("section5").style.zIndex = 1;
   document.getElementById("menuText").style.color = "red";
 });
 
 document.getElementById("menuShape").addEventListener("click", function () {
-  document.getElementById("section1").style.visibility = "hidden";
-  document.getElementById("section2").style.visibility = "visible";
-  document.getElementById("section3").style.visibility = "hidden";
-  document.getElementById("section4").style.visibility = "hidden";
-  document.getElementById("section5").style.visibility = "hidden";
+  document.getElementById("section1").style.zIndex = 1;
+  document.getElementById("section2").style.zIndex = 2;
+  document.getElementById("section3").style.zIndex = 1;
+  document.getElementById("section4").style.zIndex = 1;
+  document.getElementById("section5").style.zIndex = 1;
   document.getElementById("menuText").style.color = "red";
 });
 
 document.getElementById("menuCustom").addEventListener("click", function () {
-  document.getElementById("section1").style.visibility = "hidden";
-  document.getElementById("section2").style.visibility = "hidden";
-  document.getElementById("section3").style.visibility = "hidden";
-  document.getElementById("section4").style.visibility = "hidden";
-  document.getElementById("section5").style.visibility = "visible";
+  document.getElementById("section1").style.zIndex = 1;
+  document.getElementById("section2").style.zIndex = 1;
+  document.getElementById("section3").style.zIndex = 1;
+  document.getElementById("section4").style.zIndex = 1;
+  document.getElementById("section5").style.zIndex = 2;
   document.getElementById("menuText").style.color = "red";
 });
 
