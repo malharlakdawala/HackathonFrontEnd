@@ -6,12 +6,21 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 
     <link type="text/css" rel="stylesheet" href="styles.css" />
   </head>
@@ -26,9 +35,9 @@
         </div>
         <div class="navbar1B">
           <ul>
-            <li>Draft</li>
+            <li id="clearAll">Clear All</li>
             <li class="firstlist"><i class="bi bi-share-fill"></i>Share</li>
-            <li class="firstlist">
+            <li id="export" class="firstlist">
               <i class="bi bi-arrow-down-circle"></i>Export
             </li>
           </ul>
@@ -37,33 +46,366 @@
 
       <div class="navbar2">
         <ul>
-          <li id="firstElement">
-            <i class="bi bi-aspect-ratio-fill"></i>Elements
-          </li>
-          <li><i class="bi bi-house-door-fill"></i>Home</li>
-          <li><i class="bi bi-archive-fill"></i>Shape</li>
-          <li><i class="bi bi-file-earmark-image-fill"></i>Image</li>
-          <li><i class="bi bi-file-earmark-person-fill"></i>Custom</li>
+          <li id="firstElement"><i class="fas fa-images"></i>Image</li>
+          <li id="menuText"><i class="fas fa-font"></i>Text</li>
+          <li id="menuColour"><i class="fas fa-palette"></i>Colour</li>
+          <li id="menuShape"><i class="fas fa-shapes"></i>Shape</li>
+          <li id="menuCustom"><i class="fas fa-id-badge"></i>Custom</li>
         </ul>
       </div>
       <div class="contentArea">
-        <div class="leftArea"></div>
-        <div class="centerArea"></div>
+        <div id="section1" class="leftArea section1">
+          <div class="cover">
+            <div
+              class="dragItem"
+              draggable="true"
+              style="background-color: red"
+            ></div>
+          </div>
+          <div class="cover">
+            <div
+              class="dragItem"
+              draggable="true"
+              style="background-color: blue"
+            ></div>
+          </div>
+          <div class="cover">
+            <div
+              class="dragItem"
+              draggable="true"
+              style="background-color: green"
+            ></div>
+          </div>
+          <div class="cover">
+            <div
+              class="dragItem"
+              draggable="true"
+              style="background-color: orange"
+            ></div>
+          </div>
+
+          <div class="cover">
+            <div
+              class="dragItem"
+              draggable="true"
+              style="background-color: violet"
+            ></div>
+          </div>
+          <div class="cover">
+            <div
+              class="dragItem"
+              draggable="true"
+              style="background-color: yellow"
+            ></div>
+          </div>
+
+          <div class="cover">
+            <div
+              class="dragItem"
+              draggable="true"
+              style="background-color: black"
+            ></div>
+          </div>
+
+          <div class="cover">
+            <div
+              class="dragItem"
+              draggable="true"
+              style="background-color: white"
+            ></div>
+          </div>
+
+          <div class="cover">
+            <div
+              class="dragItem"
+              draggable="true"
+              style="background-color: pink"
+            ></div>
+          </div>
+          <div class="cover">
+            <div
+              class="dragItem"
+              draggable="true"
+              style="background-color: brown"
+            ></div>
+          </div>
+        </div>
+
+        <div id="section2" class="leftArea section2">
+          <div class="cover">
+            <div class="dragItem" draggable="true">
+              <i class="bi bi-triangle"></i>
+            </div>
+          </div>
+          <div class="cover">
+            <div class="dragItem" draggable="true">
+              <i class="bi bi-app"></i>
+            </div>
+          </div>
+          <div class="cover">
+            <div class="dragItem" draggable="true">
+              <i class="bi bi-square"></i>
+            </div>
+          </div>
+          <div class="cover">
+            <div class="dragItem" draggable="true">
+              <i class="bi bi-circle"></i>
+            </div>
+          </div>
+
+          <div class="cover">
+            <div class="dragItem" draggable="true">
+              <i class="bi bi-flower1"></i>
+            </div>
+          </div>
+          <div class="cover">
+            <div class="dragItem" draggable="true">
+              <i class="bi bi-globe2"></i>
+            </div>
+          </div>
+
+          <div class="cover">
+            <div class="dragItem" draggable="true">
+              <i class="bi bi-list"></i>
+            </div>
+          </div>
+
+          <div class="cover">
+            <div class="dragItem" draggable="true">
+              <i class="bi bi-star"></i>
+            </div>
+          </div>
+
+          <div class="cover">
+            <div class="dragItem" draggable="true">
+              <i class="bi bi-activity"></i>
+            </div>
+          </div>
+          <div class="cover">
+            <div class="dragItem" draggable="true">
+              <i class="bi bi-box-seam"></i>
+            </div>
+          </div>
+        </div>
+
+        <div id="section3" class="leftArea section3">
+          <div class="cover">
+            <div class="dragItem" draggable="true">
+              <img
+                src="https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+          </div>
+          <div class="cover">
+            <div
+              class="dragItem"
+              draggable="true"
+              style="background-color: green"
+            >
+              <img
+                src="https://images.pexels.com/photos/3244513/pexels-photo-3244513.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+          </div>
+          <div class="cover">
+            <div
+              class="dragItem"
+              draggable="true"
+              style="background-color: blue"
+            >
+              <img
+                src="https://images.pexels.com/photos/3244513/pexels-photo-3244513.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+          </div>
+          <div class="cover">
+            <div
+              class="dragItem"
+              draggable="true"
+              style="background-color: yellow"
+            >
+              <img
+                src="https://images.pexels.com/photos/1755243/pexels-photo-1755243.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+          </div>
+
+          <div class="cover">
+            <div
+              class="dragItem"
+              draggable="true"
+              style="background-color: orange"
+            >
+              <img
+                src="https://images.pexels.com/photos/3560044/pexels-photo-3560044.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+          </div>
+          <div class="cover">
+            <div
+              class="dragItem"
+              draggable="true"
+              style="background-color: orange"
+            >
+              <img
+                src="https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+          </div>
+
+          <div class="cover">
+            <div
+              class="dragItem"
+              draggable="true"
+              style="background-color: orange"
+            >
+              <img
+                src="https://images.pexels.com/photos/2770933/pexels-photo-2770933.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+          </div>
+
+          <div class="cover">
+            <div
+              class="dragItem"
+              draggable="true"
+              style="background-color: orange"
+            >
+              <img
+                src="https://images.pexels.com/photos/1671325/pexels-photo-1671325.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+          </div>
+
+          <div class="cover">
+            <div
+              class="dragItem"
+              draggable="true"
+              style="background-color: orange"
+            >
+              <img
+                src="https://images.pexels.com/photos/1693095/pexels-photo-1693095.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+          </div>
+          <div class="cover">
+            <div
+              class="dragItem"
+              draggable="true"
+              style="background-color: orange"
+            >
+              <img
+                src="https://images.pexels.com/photos/1509582/pexels-photo-1509582.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div id="section4" class="leftArea section4">
+          <div class="cover">
+            <div class="dragItem" draggable="true">
+              <h1 contenteditable="true">Title Text</h1>
+            </div>
+          </div>
+          <div class="cover">
+            <div class="dragItem" draggable="true">
+              <h3
+                contenteditable="true"
+                style="font-style: italic; font-family: sans-serif"
+              >
+                Italic Text
+              </h3>
+            </div>
+          </div>
+          <div class="cover">
+            <div class="dragItem" draggable="true">
+              <h3 contenteditable="true" style="font-family: Times New Roman">
+                Times New Roman
+              </h3>
+            </div>
+          </div>
+          <div class="cover">
+            <div class="dragItem" draggable="true">
+              <h3 contenteditable="true" style="font-family: monospace">
+                Monospace
+              </h3>
+            </div>
+          </div>
+
+          <div class="cover">
+            <div class="dragItem" draggable="true">
+              <h3 contenteditable="true" style="font-family: Impact">Impact</h3>
+            </div>
+          </div>
+          <div class="cover">
+            <div class="dragItem" draggable="true">
+              <h3 contenteditable="true" style="font-family: Trattatello">
+                Trattatello
+              </h3>
+            </div>
+          </div>
+
+          <div class="cover">
+            <div class="dragItem" draggable="true">
+              <h3 contenteditable="true" style="font-family: Brush Script MT">
+                Cursive
+              </h3>
+            </div>
+          </div>
+
+          <div class="cover">
+            <div class="dragItem" draggable="true">
+              <p contenteditable="true">Small Text</p>
+            </div>
+          </div>
+
+          <div class="cover">
+            <div class="dragItem" draggable="true">
+              <h3 contenteditable="true" style="color: red">Red Text</h3>
+            </div>
+          </div>
+          <div class="cover">
+            <div class="dragItem" draggable="true">
+              <h3 contenteditable="true" style="font-family: Trattatello">
+                $ymb0L !eXt
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        <!--
+        <div id="section5" class="leftArea section5">
+          <div class="cover">
+            <div class="dragItem" draggable="true">
+              <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+<p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+<p><img id="output" width="200" /></p>
+              
+            </div>
+          </div>
+          -->
+
+        <div id="centerArea" class="centerArea"></div>
+        <!-- <div id="centerArea" class="centerArea"></div>
+       -->
         <div class="leftScroll"></div>
         <div class="hideBar"></div>
+        <div class="deleteZone">
+          <i class="bi bi-trash"></i>
+        </div>
         <div class="rightIcons">
           <ul>
-            <li><i class="bi bi-zoom-in"></i></li>
-            <li><i class="bi bi-zoom-out"></i></li>
-            <li><i class="bi bi-eye"></i></li>
-            <li><i class="bi bi-laptop"></i></li>
-            <li><i class="bi bi-droplet"></i></li>
+            <li><i class="fas fa-search-plus"></i></li>
+            <li><i class="fas fa-search-minus"></i></li>
+
             <li></li>
             <li></li>
           </ul>
         </div>
       </div>
     </section>
-    <script src="scripts1.js"></script>
+    <script src="scripts2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
   </body>
 </html>

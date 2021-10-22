@@ -178,14 +178,18 @@ margin: 0px 40px;
 }
 
 .leftArea{
-	position: absolute;
+position: absolute;
 width: 289px;
 height: 84.5vh;
 left: 0px;
 top: 122px;
-
 background: linear-gradient(56.53deg, #2774AE 19.9%, #002E5D 47.17%, #001A5D 88.6%);
-
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows:1fr 1fr 1fr 1fr 1fr  ;
+justify-content: center;
+align-items: center;
+margin: auto;
 }
 
 .centerArea{
@@ -223,7 +227,61 @@ border-radius: 3px;
 	font-weight: 900;
 	font-size:20px; 
 padding-top: 2px;
+cursor: pointer;
 
 }
 .rightIcons ul li{
 margin-right: 5px;}
+
+.dragItem{
+
+	width: 108.82px;
+height: 79.14px;
+border:"1px solid black";
+border-radius: 3px;
+margin:0;
+}
+
+.far, .fas{
+	margin-right: 10px;
+}
+
+.cover{width: 108.82px;
+	height: 79.14px;
+	border:"1px solid black";
+	border-radius: 3px;
+	margin:10px;
+	background-color: violet;
+
+
+}
+
+
+.deleteZone{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 319px;
+	top: 618px;
+	border-radius: 50%;
+	background: #FFFFFF;
+	box-shadow: 0px -3px 36px rgba(0, 0, 0, 0.1);
+display: flex;
+	font-size: 40px;
+	justify-content: center;
+	align-items: center;
+	padding-left: 8px;
+	cursor: pointer;
+
+}
+
+.section2 .bi{
+	color:white;
+	font-size: 70px;
+padding-left: 20px;
+}
+
+.section3 img{
+	width: 108.82px;
+	height: 79.14px;
+}

@@ -1,8 +1,6 @@
 let tempvalue = null;
 let dropValue = 0;
 let dragElement = document.getElementById("clrButton");
-let originalX = dragElement.style.left;
-let originalY = dragElement.style.top;
 
 dragElement.addEventListener("mousedown", function (event) {
   tempvalue = dragElement;
