@@ -28,12 +28,15 @@ function mouseMove(e) {
 
     tempvalue.target.style.left = x + "px";
     tempvalue.target.style.top = y + "px";
+    tempvalue.target.style.resize = "both";
+    tempvalue.target.style.overflow = "auto";
+
     //tempvalue.target.style.border = "2px solid black";
     if (e.target.classList.value == "deleteZone") {
       console.log("deletezone");
       tempvalue.target.style.visibility = "hidden";
     }
-    //tempvalue = null;
+    tempvalue = null;
   }
 }
 
