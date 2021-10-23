@@ -29,17 +29,15 @@
       <div class="navbar1">
         <div class="navbar1A">
           <ul>
-            <li>Home</li>
-            <li>File</li>
+            <li style="font-size: 30px; margin-bottom: 7px">
+              <i class="fas fa-fill-drip"></i>
+            </li>
+            <li></li>
           </ul>
         </div>
         <div class="navbar1B">
           <ul>
             <li id="clearAll">Clear All</li>
-            <li class="firstlist"><i class="bi bi-share-fill"></i>Share</li>
-            <li id="export" class="firstlist">
-              <i class="bi bi-arrow-down-circle"></i>Export
-            </li>
           </ul>
         </div>
       </div>
@@ -50,7 +48,7 @@
           <li id="menuText"><i class="fas fa-font"></i>Text</li>
           <li id="menuColour"><i class="fas fa-palette"></i>Colour</li>
           <li id="menuShape"><i class="fas fa-shapes"></i>Shape</li>
-          <li id="menuCustom"><i class="fas fa-id-badge"></i>Custom</li>
+          <li id="menuCustom"><i class="fas fa-upload"></i>Upload</li>
         </ul>
       </div>
       <div class="contentArea">
@@ -197,33 +195,21 @@
             </div>
           </div>
           <div class="cover">
-            <div
-              class="dragItem"
-              draggable="true"
-              style="background-color: green"
-            >
+            <div class="dragItem" draggable="true">
               <img
                 src="https://images.pexels.com/photos/3244513/pexels-photo-3244513.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
               />
             </div>
           </div>
           <div class="cover">
-            <div
-              class="dragItem"
-              draggable="true"
-              style="background-color: blue"
-            >
+            <div class="dragItem" draggable="true">
               <img
                 src="https://images.pexels.com/photos/3244513/pexels-photo-3244513.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
               />
             </div>
           </div>
           <div class="cover">
-            <div
-              class="dragItem"
-              draggable="true"
-              style="background-color: yellow"
-            >
+            <div class="dragItem" draggable="true">
               <img
                 src="https://images.pexels.com/photos/1755243/pexels-photo-1755243.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
               />
@@ -231,22 +217,14 @@
           </div>
 
           <div class="cover">
-            <div
-              class="dragItem"
-              draggable="true"
-              style="background-color: orange"
-            >
+            <div class="dragItem" draggable="true">
               <img
                 src="https://images.pexels.com/photos/3560044/pexels-photo-3560044.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
               />
             </div>
           </div>
           <div class="cover">
-            <div
-              class="dragItem"
-              draggable="true"
-              style="background-color: orange"
-            >
+            <div class="dragItem" draggable="true">
               <img
                 src="https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
               />
@@ -254,11 +232,7 @@
           </div>
 
           <div class="cover">
-            <div
-              class="dragItem"
-              draggable="true"
-              style="background-color: orange"
-            >
+            <div class="dragItem" draggable="true">
               <img
                 src="https://images.pexels.com/photos/2770933/pexels-photo-2770933.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
               />
@@ -266,11 +240,7 @@
           </div>
 
           <div class="cover">
-            <div
-              class="dragItem"
-              draggable="true"
-              style="background-color: orange"
-            >
+            <div class="dragItem" draggable="true">
               <img
                 src="https://images.pexels.com/photos/1671325/pexels-photo-1671325.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
               />
@@ -278,22 +248,14 @@
           </div>
 
           <div class="cover">
-            <div
-              class="dragItem"
-              draggable="true"
-              style="background-color: orange"
-            >
+            <div class="dragItem" draggable="true">
               <img
                 src="https://images.pexels.com/photos/1693095/pexels-photo-1693095.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
               />
             </div>
           </div>
           <div class="cover">
-            <div
-              class="dragItem"
-              draggable="true"
-              style="background-color: orange"
-            >
+            <div class="dragItem" draggable="true">
               <img
                 src="https://images.pexels.com/photos/1509582/pexels-photo-1509582.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
               />
@@ -373,19 +335,23 @@
           </div>
         </div>
 
-        <!--
         <div id="section5" class="leftArea section5">
           <div class="cover">
             <div class="dragItem" draggable="true">
-              <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
-<p><label for="file" style="cursor: pointer;">Upload Image</label></p>
-<p><img id="output" width="200" /></p>
-              
+              <input
+                type="file"
+                accept="image/*"
+                name="image"
+                id="file"
+                onchange="loadFile(event)"
+                style="display: none"
+              />
+              <label for="file" style="cursor: pointer">Upload Image</label>
+              <img id="output" width="108" />
             </div>
           </div>
-          -->
-
-        <div id="centerArea" class="centerArea"></div>
+        </div>
+        <canvas id="centerArea" class="centerArea"></canvas>
         <!-- <div id="centerArea" class="centerArea"></div>
        -->
         <div class="leftScroll"></div>
@@ -397,9 +363,6 @@
           <ul>
             <li><i class="fas fa-search-plus"></i></li>
             <li><i class="fas fa-search-minus"></i></li>
-
-            <li></li>
-            <li></li>
           </ul>
         </div>
       </div>
