@@ -301,7 +301,8 @@ display: flex;
 .section2 .bi{
 	color:black;
 	font-size: 70px;
-padding-left: 20px;
+	text-align: center;
+padding-left: 6px;
 }
 
 .section3 img{
