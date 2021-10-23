@@ -102,6 +102,9 @@ document.getElementById("clearAll").addEventListener("click", function () {
   location.reload();
 });
 
+document.getElementById("clearAll1").addEventListener("click", function () {
+  location.reload();
+});
 let loadFile = function (event) {
   let image = document.getElementById("output");
   image.src = URL.createObjectURL(event.target.files[0]);
